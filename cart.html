@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    
+    <script src="cart.js"></script>
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <div id="cart"></div>
+    <button onclick="clearCart()">Clear Cart</button>
+
+    <script>
+        function displayCart() {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartHTML = "";
+
+            if (cartItems.length === 0) {
+                cartHTML = "<p>Your cart is empty.</p>";
+            } else {
+                cartItems.forEach((item, index) => {
+                    cartHTML += `<p>${item.name} - ₹${item.price} 
+                        <button onclick="removeFromCart(${index})">Remove</button></p>`;
+                });
+            }
+
+            document.getElementById("cart").innerHTML = cartHTML;
+        }
+
+        function removeFromCart(index) {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            displayCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem("cart");
+            displayCart();
+        }
+
+        window.onload = displayCart;
+    </script>
+</body>
+</html>

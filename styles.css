@@ -1,0 +1,159 @@
+body {
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("bgnew.jpg"); /* Ensure this file exists in the correct folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+
+
+/* Header container styles */
+header {
+  background:transparent;       /* White header background */
+  padding: 10px 30px;       /* Padding around the header */
+}
+
+/* Flex container to hold logo and navigation */
+.header-container {
+  display: flex;           /* Puts items in one row */
+  align-items: center;     /* Vertically centers items */
+}
+
+/* Logo styling */
+.logo {
+  margin-right: 40px;      /* Space between logo and nav */
+}
+
+.logo img {
+  height: 50px;            /* Adjust logo size as needed */
+  width: auto;
+  vertical-align: top;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;        /* Removes bullet points */
+  display: flex;           /* Puts nav items in a row */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 50px;      /* Space between nav items */
+}
+
+nav ul li a {
+  text-decoration: none;   /* Removes underlines */
+  color: rgb(155, 83, 123);            /* Text color */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+
+hr{
+  border-color:goldenrod;
+}
+
+p {
+  color:rgb(139, 65, 119);
+  font-family: 'poppins',sans-serif;
+  text-align: left;
+  text-decoration: wavy;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: oblique;
+}
+
+
+.top-right-image {
+display: flex;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+  video-container{
+      text-align: center;
+      margin-top: 80px;
+  }
+
+  .video-container video{
+      width: 40%;
+      border-radius: 20px;}
+     
+  
+     /* Product Container */
+.product-container {
+  display: flex; /* Makes products align in a row */
+  flex-wrap: nowrap; /* Prevents wrapping to the next line */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  gap: 20px; /* Adds spacing between products */
+  padding: 20px;
+  white-space: nowrap;
+}
+
+/* Product Styling */
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 250px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex: 0 0 auto; /* Ensures products do not shrink */
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product button {
+  padding: 10px;
+  background-color: #945c7c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #986692;
+}
+
+
+      
+    
+
+footer {
+  background-color:transparent;
+  color: rgb(205, 79, 123);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-decoration: dashed;
+  margin-top: 50px;
+  
+}
+
+.footer-links a {
+  color: rgb(122, 55, 106);
+  margin: 0 15px;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
